@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Algoritm</title>
+</head>
+<body>
+<script>
+  const getUniqArr = (arr1, arr2) => {
+    //превращаем второй массив в хеш таблицу, чтоб в след раз не обходить массив.
+    const hashTable = arr2.reduce((acc, cur) => {
+      acc[cur] = cur;
+      return acc;
+    }, {});
+
+    return arr1.filter((item) => {
+      // Чтоб взять значение объекта не нужно его обходить в цикле
+      return hashTable[item] === undefined;
+    });
+  }
+
+  console.log(getUniqArr([0, 1, 2, 10], [10, 20, 30, 50]));
+  console.log(getUniqArr([2, 4, 8, 16], [2, 4, 8, 0]));
+  console.log(getUniqArr([100], [100, 200, 300]));
+  console.log(getUniqArr([], [100, 200, 300]));
+  console.log(getUniqArr([0], [100, 200, 300]));
+</script>
+</body>
+</html>

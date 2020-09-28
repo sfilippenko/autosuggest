@@ -11,7 +11,7 @@ const store = configureStore();
 ReactDOM.render(
   <Provider store={store}>
     <MuiThemeProvider theme={theme}>
-      <Layout/>
+      <Layout />
     </MuiThemeProvider>
   </Provider>,
   document.getElementById('root'),
