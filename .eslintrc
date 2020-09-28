@@ -1,0 +1,77 @@
+{
+  "root": true,
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended",
+    "prettier/flowtype",
+    "prettier/react",
+    "prettier/standard",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["prettier", "react-hooks", "@typescript-eslint/eslint-plugin"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "no-console": "warn",
+    "no-shadow": "off",
+    "camelcase": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "jsx-a11y/label-has-associated-control": ["error", {
+      "controlComponents": ["input"],
+      "labelComponents": ["label"],
+      "labelAttributes": ["htmlFor"]
+    }],
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "no-underscore-dangle": ["error", {
+      "allow": ["__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"]
+    }],
+    "no-use-before-define": [0],
+    "@typescript-eslint/no-use-before-define": [1],
+    "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
+    "prettier/prettier": "error",
+    "react/destructuring-assignment": "off",
+    "react/forbid-foreign-prop-types": "off",
+    "react/forbid-prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-wrap-multilines": ["error", {
+      "declaration": false
+    }],
+    "react/no-array-index-key": "off",
+    "react/no-multi-comp": "off",
+    "react/state-in-constructor": "off",
+    "react/static-property-placement": ["error", "static public field"],
+    "react/require-default-props": "off",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/prop-types": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "import/extensions": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "import/prefer-default-export": "warn",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/button-has-type": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {
+        "react/prop-types": "error",
+        "@typescript-eslint/no-unused-vars": "off"
+      }
+    }
+  ]
+}
